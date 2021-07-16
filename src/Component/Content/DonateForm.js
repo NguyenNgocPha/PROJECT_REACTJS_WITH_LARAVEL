@@ -10,24 +10,26 @@ export default class DonateForm extends Component {
                         <div className="row justify-content-center">
                             <div className="col-lg-6">
                             <div className="section-title text-center pb-20">
-                                <h3 className="title"><b>DONATE</b></h3>
-                                <p>To receive the support code for students, please follow the instructions below.</p>
+                                <h3 className="title"><b>JOIN OUR #ITRAISESIT CAMPAIGN</b></h3>
                             </div> 
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-6">
-                            <div className="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                <h4 className="contact-title">How you can become our sponsor</h4>
-                                <div className="text"><b>Step 1:</b> Fill your information in the box below to receive an email with a sponsorship code (sent within 24 hours)</div>
-                                <div className="text"><b>Step 2:</b> After receiving the code, please kindly transfer the donation to PN Vietnam bank account with the syntax: ITraisesIT Support code (Ex: ITraisesIT DNTT001):</div>
+                                <div className="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                    <h5>Campaign #</h5><br/>
+                                    <h3 className="contact-title">IT Raises IT</h3>
+                                    <div className="text">
+                                        IT raises IT is a crowdfunding program to join forces with PNV so that 
+                                        the project of building technology for future information technology 
+                                        engineers can continue in the future.This is a very difficult part.
+                                    </div>
                                 <div>
                                 <ul className="contact-info">
-                                    <h6>TECHCOMBANK</h6>
-                                    <li>Account’s name: PASSERELLES NUMERIQUES(PN)</li>
-                                    <li>Account’s number: 19134608156019</li>
-                                    <li>Swift code: VTCBVNVX</li>
-                                    <li>Your donation transaction will be updated here.</li>
+                                    <h6>Benefits of joining</h6>
+                                    <li className="fa fa-envelope" style={{fontSize: '14px', color: '#18A0FB'}}></li><span className="benifit">Monthly transfer information update letter</span><br/>
+                                    <li className="fas fa-users" style={{fontSize: '14px', color: '#18A0FB'}}></li><span className="benifit">Visiting PNV school and students</span><br/>
+                                    <li className="fa fa-certificate" style={{fontSize: '14px', color: '#18A0FB'}}></li><span className="benifit">Certificate of participation in IT raising IT program</span>
                                 </ul>
                                 </div>
                             </div>
@@ -56,19 +58,9 @@ export default class DonateForm extends Component {
                                     <i className="fa fa-phone" />
                                     </div>
                                 </div>
-                                <div className="form-input mt-15">
-                                    <label>Donation type</label>
-                                    <div className="input-items default">
-                                        <select className="optiontype" >
-                                            <option value="Once time">Once time</option>
-                                            <option value="Monthly">Monthly</option>
-                                        </select>
-                                        <i className="fas fa-hand-holding-usd" />
-                                    </div>
-                                </div>
                                 <p className="form-message" />
                                 <div className="form-input rounded-buttons mt-20">
-                                    <button type="submit" className="main-btn rounded-three">Submit</button>
+                                    <button type="submit" className="main-btn rounded-three">Join</button>
                                 </div> 
                                 </form>
                             </div> 

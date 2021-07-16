@@ -10,11 +10,11 @@ export default class Footer extends Component {
                     <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-sm-6">
-                        <div className="footer-link">
-                            <ul>
-                            <li><a href="#"><img src="assets/images/logo/pn-logo.png" alt="" className="logo_footer" /></a></li>
-                            </ul>
-                        </div>
+                            <div className="footer-link">
+                                <ul>
+                                <li><a href="#"><img src="assets/images/logo/pn-logo.png" alt="" className="logo_footer" /></a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="col-lg-3 col-sm-6">
                         <div className="footer-link">

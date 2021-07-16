@@ -247,8 +247,8 @@ p {
 
 /*==== Section Title =====*/
 .section-title .title {
-  font-size: 44px;
-  font-weight: 700px;
+  font-size: 35px;
+  font-weight: 600px;
   color: #000;
   line-height: 55px; }
   @media (max-width: 767px) {
@@ -539,17 +539,7 @@ p {
 /*===========================
        2.BUTTON css 
 ===========================*/
-.ITRaisesIT-btn{
-  display: inline-block;
-  text-align: center;
-  border: 2px solid #fdce6e;
-  font-size: 14px;
-  border-radius: 5px;
-  padding: 5px;
-  background: -webkit-linear-gradient(left, #f47105 0%, #F4A305  50%, #fdce6e 100%);
-  background: -o-linear-gradient(left, #f47105 0%, #F4A305 50%, #fdce6e 100%);
-  background: linear-gradient(to right, #f47105 0%, #F4A305 50%, #fdce6e 100%);
-}
+
 .main-btn {
   display: inline-block;
   font-weight: 700;
@@ -1454,6 +1444,50 @@ p {
 /*===========================
          4.ABOUT css 
 ===========================*/
+/* TEST */
+.block-counter-1 {
+  text-align: center
+}
+
+.block-counter-1 .number, .block-counter-1 .caption {
+  display: block;
+  line-height: 1
+}
+
+.block-counter-1 .number {
+  color: #fd5f00;
+  font-size: 4rem;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-family: "Anton", sans-serif
+}
+
+.block-counter-1 .number:after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .3)
+}
+
+.block-counter-1.block-counter-1-sm {
+  text-align: left
+}
+
+.block-counter-1.block-counter-1-sm .number:after {
+  left: 0;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0)
+}
+
+/* TEST */
 .about-area {
   position: relative;
   background-color: #f4f6f7;
@@ -2535,13 +2569,14 @@ nav {
 
 
 /* Style the content */
-article {
+.article {
   -webkit-flex: 3;
   -ms-flex: 3;
   flex: 3;
   padding:0 50px 0 10px;
   margin-left: 145px;
   color: white;
+  text-align: center;
 }
 
 /* Style the footer */
@@ -2566,13 +2601,15 @@ article {
 .w3-padding-32{
   height: 180px;
   width: 180px;
+  vertical-align: middle;
 }
 
-.w3-padding-32, h1{
+.w3-padding-32{
   top: 50px;
 }
 
 .w3-padding{
+  color: #FFF;
   width: 140px;
   height: 140px;
   display: table-cell; 
@@ -2604,4 +2641,64 @@ center, h4{
   height: 30px;
 }
 
+
+/* READ MORE */
+.readMore{
+  border: none;
+  background-color: #f4f6f7;
+  color: #0067f4;
+}
+
+/* END READ MORE */
+
+
+/* IT RAIses IT*/
+.benifit{
+  margin-left: 10px;
+}
+
+/* NUMBER */
+.block-counter-1 {
+  text-align: center
+}
+
+.block-counter-1 .number, .block-counter-1 .caption {
+  display: block;
+  line-height: 1
+}
+
+.block-counter-1 .number {
+  color: #fd5f00;
+  font-size: 4rem;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-family: "Anton", sans-serif
+}
+
+.block-counter-1 .number:after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .3)
+}
+
+.block-counter-1.block-counter-1-sm {
+  text-align: left
+}
+
+.block-counter-1.block-counter-1-sm .number:after {
+  left: 0;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0)
+}
+
+/* END NUMBER */
 

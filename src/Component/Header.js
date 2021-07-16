@@ -90,7 +90,7 @@ export default class Header extends Component {
                                     <div className="row justify-content-center">
                                     <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
                                         <ul className="carousel-btn rounded-buttons">
-                                        <li><a className="main-btn rounded-three" href="#contact">DONATE</a></li>
+                                        <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
                                         </ul>
                                     </div>
                                     </div>
@@ -103,7 +103,7 @@ export default class Header extends Component {
                                     <div className="row justify-content-center">
                                     <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
                                         <ul className="carousel-btn rounded-buttons">
-                                        <li><a className="main-btn rounded-three" href="#contact">DONATE</a></li>
+                                        <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
                                         </ul>
                                     </div>
                                     </div>
@@ -116,7 +116,7 @@ export default class Header extends Component {
                                     <div className="row justify-content-center">
                                         <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
                                             <ul className="carousel-btn rounded-buttons">
-                                            <li><a className="main-btn rounded-three" href="#contact">DONATE</a></li>
+                                            <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
                                             </ul>
                                         </div>
                                     </div>
