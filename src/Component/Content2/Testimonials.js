@@ -31,7 +31,7 @@ export default class Testimonials extends Component {
                         <div className="col-md-4">
                             <div className="pricing-style-one mt-40 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                 <div className="test-image text-center">
-                                    <img src={"assets/images/Students/" + sharing.image} alt="" />
+                                    <img src="assets/images/Students/hoai.PNG" alt="" />
                                 </div>
                                 <div className="pricing-header text-center">
                                     <h5 className="sub-title">{sharing.name}</h5>

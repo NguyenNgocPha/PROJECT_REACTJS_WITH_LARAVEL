@@ -6,7 +6,6 @@ export default class DonateForm extends Component {
         super(props);
 
         this.state = {
-            campaigns: [],
             name: '',
             email: '',
             phone: '',
@@ -18,15 +17,6 @@ export default class DonateForm extends Component {
         }
     }
 
-    componentDidMount() {
-        axios.get(`http://localhost:8000/api/campaign`)
-            .then(res => {
-                const campaigns = res.data;
-                this.setState({ campaigns });
-            })
-            .catch(error => console.log(error));
-    }
-    
     onChangeName = (e) => {
         this.setState({ name: e.target.value });
     }
@@ -68,13 +58,13 @@ export default class DonateForm extends Component {
                         <div className="row justify-content-center">
                             <div className="col-lg-6">
                                 <div className="section-title text-center pb-20">
-                                    <h3 className="title"><b>JOIN WITH CAMPAIGNS</b></h3>
+                                    <h3 className="title"><b>Join with Campaign</b></h3>
                                     <p>To receive the support code for students, please follow the instructions below.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
-                        {this.state.campaigns.map(campaign =>
+                            {this.state.campaigns.map(campaign =>
                                 <div className="col-lg-6">
                                     <div className="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                         <h5>Campaign {campaign.id}</h5><br />

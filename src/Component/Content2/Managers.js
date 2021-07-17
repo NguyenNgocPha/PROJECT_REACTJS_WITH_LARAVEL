@@ -35,7 +35,7 @@ export default class Managers extends Component {
                                     <div className="col-lg-4">
                                         <div className="single-testimonial mt-30 mb-30 text-center">
                                             <div className="testimonial-image">
-                                                <img src={"assets/images/My Teacher/"+leader.image} alt="Author" className="coNgoc" />
+                                                <img src="assets/images/My Teacher/CoNgoc.PNG" alt="Author" className="coNgoc" />
                                             </div>
                                             <div className="testimonial-content">
                                                 <h6 className="author-name">{leader.name}</h6>

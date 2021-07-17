@@ -1,27 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class ITRaisesIT extends Component {
+    state = {
+        campaigns: []
+    }
+
+    componentDidMount() {
+        axios.get(`http://localhost:8000/api/campaign`)
+            .then(res => {
+                const campaigns = res.data;
+                this.setState({ campaigns });
+            })
+            .catch(error => console.log(error));
+    }
     render() {
         return (
             <section id="ITRaisesIT" className="testimonial-area">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
-                        <div className="section-title text-center pb-50">
-                            <h3 className="title">Join our #ITraisesIT campaign</h3>
-                        </div>
+                            <div className="section-title text-center pb-50">
+                                <h3 className="title">Join our #ITraisesIT campaign</h3>
+                            </div>
                         </div>
                     </div>
+
                     <div className="row">
-                        <div className="col-sm-6">
-                            <h6>Campaign #</h6><br/>
-                            <h3>IT Raises IT</h3><br/>
-                            <p>
-                                IT raises IT is a crowdfunding program to join forces with PNV so that 
-                                the project of building technology for future information technology 
-                                engineers can continue in the future.This is a very difficult part.
-                            </p>
-                        </div>
+                        {this.state.campaigns.map(campaign =>
+                            <div className="col-sm-6">
+                                <h6>Campaign #{campaign.id}</h6><br />
+                                <h3>{campaign.name}</h3><br />
+                                <p>
+                                    {campaign.content}
+                                </p>
+                            </div>
+                        )}
+
                         {/*  style={{backgroundColor: '#bbb'}} */}
                         <div className="col-sm-6">
                             <div className="row">
@@ -50,7 +65,7 @@ export default class ITRaisesIT extends Component {
                             </div>
                             <div className="form-input rounded-buttons mt-20">
                                 <button type="submit" className="ITRaisesIT-btn">Join the campaign</button>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
