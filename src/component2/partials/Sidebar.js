@@ -27,41 +27,41 @@ export default class Sidebar extends Component {
               </li>
               <li>
                 <div className="w3-bar-block">
-                  <Link to="/indexAdmin/dashboard">
+                  <a href="/dashboard">
                     <i className="fas fa-tachometer-alt"></i>Dashboard
-                  </Link>
+                  </a>
                 </div>
                 <hr />
               </li>
               <li>
                 <div className="w3-bar-block">
-                  <Link to="/admin/listTable">
-                    <i className="fa fa-list" aria-hidden="true"></i>List Staff
-                  </Link>
+                  <a href="/partner">
+                    <i className="fa fa-list" aria-hidden="true"></i>List Partner
+                  </a>
                 </div>
                 <hr />
               </li>
               <li>
                 <div className="w3-bar-block">
-                  <Link to="/admin/profile">
-                    <i className="fas fa-user"></i>Profile
-                  </Link>
+                  <a href="/campaign">
+                    <i className="fas fa-user"></i>Campaign
+                  </a>
                 </div>
                 <hr />
               </li>
               <li>
                 <div className="w3-bar-block">
-                  <Link to="/admin/showEvent">
+                  <a href="/admin/showEvent">
                     <i className="fas fa-user"></i>Event
-                  </Link>
+                  </a>
                 </div>
                 <hr />
               </li>
               <li>
                 <div className="w3-bar-block">
-                  <Link to="/admin/ListPartner">
+                  <a href="/admin/ListPartner">
                     <i className="fas fa-user"></i>Partner
-                  </Link>
+                  </a>
                 </div>
                 <hr />
               </li>

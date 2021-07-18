@@ -2,6 +2,7 @@ import './Home.css';
 import React, { Component } from 'react';
 import Dashboard from '../context/Dashboard';
 import Sidebar from '../partials/Sidebar';
+import ListPartner from '../context/Partner/ListPartner';
 import Login from '../auth/Login';
 import Footer from '../../Component/Footer';
 import ContentChild from '../../Component/Content/ContentChild';
@@ -24,12 +25,16 @@ export default class Home extends Component {
           <div className="App" id="outer-container">
             <Route exact path="/indexAdmin">
               <Sidebar
-                pageWrapId={'page-wrap'}
-                outerContainerId={'outer-container'}
+              pageWrapId={'page-wrap'}
+              outerContainerId={'outer-container'}
               />
             </Route>
-            <Route  path="/indexAdmin/dashboard">
-              <Dashboard />
+            <Route exact path="/dashboard" >
+              <Dashboard
+              />
+            </Route>
+            <Route exact path="/partner" >
+              <ListPartner  />
             </Route>
             <div id="page-wrap">
               <div
@@ -52,7 +57,7 @@ export default class Home extends Component {
                     <div class="modal-footer">
                       <button
                         class="btn btn-primary btn-block"
-                        onClick={this.logout}
+                        onClick={this.onLogout}
                       >
                         Logout
                       </button>
