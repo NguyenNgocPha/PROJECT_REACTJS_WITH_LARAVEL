@@ -1,0 +1,157 @@
+h3, h4{
+  text-align: left;
+}
+
+tbody{
+  text-align: left;
+}
+.col-md-12 a:hover{
+  color:peru;
+  text-decoration: none;
+}
+.table label{
+  background-color:white;
+}
+
+.nameTable{
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-bordered thead tr{
+  background:darkorange;
+  color:black;
+}
+
+.table-bordered tbody{
+  background:mintcream;
+}
+.table-warning th{
+  text-align: center;
+}
+.fa-trash-alt{
+  color:red;
+}
+
+.fa-edit{
+  color:orange;
+}
+.form-group label{
+  text-align: left;
+  margin-right: 1200px;
+}
+.container{
+  height:auto;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.scrollbar
+{
+  text-align: justify;
+	float: left;
+	height: 300px;
+	width: 100%;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+.scrollbar1
+{
+  text-align: justify;
+	float: left;
+	height: 100px;
+	width: 100%;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+.scrollbar p{
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+.scrollbar1 p{
+  margin-right: 10px;
+  font-size: 13px;
+}
+/*
+ *  STYLE 1
+ */
+
+#style-1::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+  background-color: #ccc;
+}
+
+.storyVideo{
+  width: 100%;
+  height: 100%;
+}
+
+.w3-light-grey{
+  text-align: left;
+  font-style: italic;
+  font-size: 12px;
+  height: 60px;
+}
+
+.btn-close{
+  float: right;
+  color:darkslategray;
+}
+.btn-close:hover{
+  color: red;
+}
+.titleTable h1{
+  background:orange;
+}
+.nameStory{
+  height: 50px;
+}
+h4{
+  text-align: center;
+  font-weight: bold;
+}
+.w3-wide{
+  background-color: black;
+  width: 100%;
+}
+.linkStory{
+  text-align: left;
+  width: 100%;
+}
+
+.linkStory a{
+  color:darkorange;
+  font-style:italic;
+}
+
+.modal-header h1{
+  text-align: center;
+}
+
+.w3-container label{
+  background:darkorange;
+  color:black;
+}
