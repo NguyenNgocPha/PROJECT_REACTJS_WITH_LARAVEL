@@ -21,7 +21,7 @@ export default class Partners extends Component {
                     <div className="container">
                         <div className="row client-active">
                             {this.state.partners.map(partner =>
-                                <div className="col-lg-3">
+                                <div key={partner.id} className="col-lg-3">
                                     <div className="single-client text-center">
                                         <img src={"assets/images/Partners/" + partner.image} className="imagepartners" alt="Logo" />
                                     </div>

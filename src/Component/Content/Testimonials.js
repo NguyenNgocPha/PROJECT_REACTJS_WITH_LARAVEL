@@ -28,7 +28,7 @@ export default class Testimonials extends Component {
                     </div> {/* row */}
                     <div className="row justify-content-center"> 
                     { this.state.sharing.map(sharing =>            
-                        <div className="col-md-4">
+                        <div key={sharing.id} className="col-md-4">
                             <div className="pricing-style-one mt-40 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                 <div className="test-image text-center">
                                     <img src={"assets/images/Students/" + sharing.image} alt="" />

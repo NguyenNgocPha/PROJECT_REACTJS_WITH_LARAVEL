@@ -45,7 +45,7 @@ export default class Student_Speech extends Component {
                             </div>
                         </div> {/* row */}
                         { this.state.discovers.map(discover => 
-                        <div className="row grid">
+                        <div key={discover.id} className="row grid">
                             <div className="col-lg-6 col-sm-8 branding-3 planning-3">
                                 <div className="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                     <div className="portfolio-image">
