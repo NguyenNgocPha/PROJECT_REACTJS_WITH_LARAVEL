@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\PartnerController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,7 +23,6 @@ Route::get('/sharing',[HomepageController::class, 'getSharing']);
 Route::get('/campaign',[HomepageController::class, 'getCampaign']);
 Route::get('/leader',[HomepageController::class, 'getLeader']);
 Route::get('/discover',[HomepageController::class, 'getDiscover']);
-Route::get('/partner',[HomepageController::class, 'getPartner']);
 Route::get('/donater',[HomepageController::class, 'getDonate']);
 Route::post('/donater',[HomepageController::class, 'postDonate']);
 
@@ -32,3 +32,4 @@ Route::post('/donater',[HomepageController::class, 'postDonate']);
 //     return Response()->json(array("token"=>$token));
 // });
 Route::post('/loginAdmin',[HomepageController::class, 'postLoginAdmin']);
+Route::resource('partner',PartnerController::class);

@@ -37,14 +37,15 @@ class HomepageController extends Controller
     }
 
     public function getPartner(){
-        $partner = Partner::all();
-        echo json_encode($partner);
+        
     }
 
     public function getDonate(){
         $donate = Donater::all();
         echo json_encode($donate);
     }
+
+    
 
     public function postDonate(Request $request)
     {
@@ -73,6 +74,7 @@ class HomepageController extends Controller
         }
     }
 
+    
     public function postLoginAdmin(Request $request){
         $validator = Validator::make($request->all(), [
             'email' => 'required|string|email',
