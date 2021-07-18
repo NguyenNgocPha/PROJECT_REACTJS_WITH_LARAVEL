@@ -25,3 +25,10 @@ Route::get('/discover',[HomepageController::class, 'getDiscover']);
 Route::get('/partner',[HomepageController::class, 'getPartner']);
 Route::get('/donater',[HomepageController::class, 'getDonate']);
 Route::post('/donater',[HomepageController::class, 'postDonate']);
+
+// Route::get('token', function (Request $request) {
+//     $token = $request->session()->token();
+//     $token = csrf_token();
+//     return Response()->json(array("token"=>$token));
+// });
+Route::post('/loginAdmin',[HomepageController::class, 'postLoginAdmin']);

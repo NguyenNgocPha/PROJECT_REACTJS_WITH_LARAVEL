@@ -73,4 +73,22 @@ class HomepageController extends Controller
         }
     }
 
+    public function postLoginAdmin(Request $request){
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(["errors" => $validator->getMessageBag(), "success" => 0]);
+        }
+
+        $user = User::where("email", $request->email)->get();
+        if ($user->count() > 0) {
+            if ($user[0]->password == $request->password) {
+                return Response()->json(["success" => 1, 'user' => $user[0]]);
+            }
+        }
+        return response()->json(['errors' => ['login' => "Login profile does not exist!!"]]);
+    }
+
 }
