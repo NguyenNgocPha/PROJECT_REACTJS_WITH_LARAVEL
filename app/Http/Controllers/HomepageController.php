@@ -15,37 +15,12 @@ use Illuminate\Support\Facades\Validator;
 class HomepageController extends Controller
 {
     private $status=200;
-    //
-    public function getSharing(){
-        $sharing = Sharing::all();
-        echo json_encode($sharing);
-    }
-
-    public function getCampaign(){
-        $campaign = Campaign::all();
-        echo json_encode($campaign);
-    }
-
-    public function getDiscover(){
-        $discover = Discover::all();
-        echo json_encode($discover);
-    }
-
-    public function getLeader(){
-        $leader = Leader::all();
-        echo json_encode($leader);
-    }
-
-    public function getPartner(){
-        
-    }
-
+    
     public function getDonate(){
         $donate = Donater::all();
         echo json_encode($donate);
     }
 
-    
 
     public function postDonate(Request $request)
     {

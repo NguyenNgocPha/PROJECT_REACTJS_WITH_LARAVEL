@@ -4,6 +4,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\SharingController;
+use App\Http\Controllers\LeaderController;
+use App\Http\Controllers\CampaignController;
+use App\Http\Controllers\DiscoverController;
+use App\Http\Controllers\DonaterController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,12 +25,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/sharing',[HomepageController::class, 'getSharing']);
-Route::get('/campaign',[HomepageController::class, 'getCampaign']);
-Route::get('/leader',[HomepageController::class, 'getLeader']);
-Route::get('/discover',[HomepageController::class, 'getDiscover']);
-Route::get('/donater',[HomepageController::class, 'getDonate']);
-Route::post('/donater',[HomepageController::class, 'postDonate']);
+Route::resource('/sharing',SharingController::class);
+Route::resource('/campaign',CampaignController::class);
+Route::resource('/leader',LeaderController::class);
+Route::resource('/discover',DiscoverController::class);
+Route::resource('/partner',PartnerController::class);
+Route::resource('/donater',DonaterController::class);
+//Route::post('/donater',HomepageController::class);
+
+
 
 // Route::get('token', function (Request $request) {
 //     $token = $request->session()->token();
