@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CampaignController extends Controller
 {
-    public function getCampaign(){
+    public function index(){
         $campaign = Campaign::all();
         echo json_encode($campaign);
     }

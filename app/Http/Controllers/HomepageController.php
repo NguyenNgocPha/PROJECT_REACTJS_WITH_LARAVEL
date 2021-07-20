@@ -16,7 +16,7 @@ class HomepageController extends Controller
 {
     private $status=200;
     
-    public function getDonate(){
+    public function index(){
         $donate = Donater::all();
         echo json_encode($donate);
     }

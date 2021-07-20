@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Donater;
 class DonaterController extends Controller
 {
-     public function getDonate(){
+     public function index(){
         $donate = Donater::all();
         echo json_encode($donate);
     }

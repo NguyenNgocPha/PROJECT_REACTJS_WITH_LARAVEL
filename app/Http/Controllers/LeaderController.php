@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LeaderController extends Controller
 {
-    public function getLeader(){
+    public function index(){
         $leader = Leader::all();
         echo json_encode($leader);
     }
