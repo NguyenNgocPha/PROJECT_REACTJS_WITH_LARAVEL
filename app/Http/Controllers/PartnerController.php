@@ -7,9 +7,11 @@ use App\Models\Partner;
 
 class PartnerController extends Controller
 {
-    public function getPartner(){
+    public function index(){
         $partner = Partner::all();
         echo json_encode($partner);
     }
+
+    
     
 }

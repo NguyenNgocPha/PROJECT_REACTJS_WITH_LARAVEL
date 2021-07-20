@@ -24,13 +24,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/sharing',[SharingController::class, 'getSharing']);
-Route::get('/campaign',[CampaignController::class, 'getCampaign']);
-Route::get('/leader',[LeaderController::class, 'getLeader']);
-Route::get('/discover',[DiscoverController::class, 'getDiscover']);
-Route::get('/partner',[PartnerController::class, 'getPartner']);
-Route::get('/donater',[DonaterController::class, 'getDonate']);
-Route::post('/donater',[HomepageController::class, 'postDonate']);
+Route::resource('/sharing',SharingController::class);
+Route::resource('/campaign',CampaignController::class);
+Route::resource('/leader',LeaderController::class);
+Route::resource('/discover',DiscoverController::class);
+Route::resource('/partner',PartnerController::class);
+Route::resource('/donater',DonaterController::class);
+//Route::post('/donater',HomepageController::class);
 
 // Route::get('token', function (Request $request) {
 //     $token = $request->session()->token();
