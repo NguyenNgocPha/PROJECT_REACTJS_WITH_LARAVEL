@@ -9,6 +9,7 @@ use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\DiscoverController;
 use App\Http\Controllers\DonaterController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -32,9 +33,12 @@ Route::resource('/partner',PartnerController::class);
 Route::resource('/donater',DonaterController::class);
 //Route::post('/donater',HomepageController::class);
 
+
+
 // Route::get('token', function (Request $request) {
 //     $token = $request->session()->token();
 //     $token = csrf_token();
 //     return Response()->json(array("token"=>$token));
 // });
 Route::post('/loginAdmin',[HomepageController::class, 'postLoginAdmin']);
+Route::resource('partner',PartnerController::class);
