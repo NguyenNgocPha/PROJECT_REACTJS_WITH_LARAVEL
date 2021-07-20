@@ -1,95 +1,98 @@
 import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
 import axios from "axios";
-import AddPartner from "./AddPartner";
+// import AddPartner from "./AddPartner";
 import { Link } from "react-router-dom";
 
-class ListPartner extends Component {
+class ListDiscover extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            partners: [],
+            discovers: [],
             noDataFound: [],
             newModalPartner: false,
         };
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8000/api/partner`)
+        axios.get(`http://localhost:8000/api/discover`)
             .then(res => {
-                const partners = res.data;
-                this.setState({ partners });
+                const discovers = res.data;
+                this.setState({ discovers });
             })
             .catch(error => console.log(error));
 
     }
 
   
-    handleAddSubmit = (partner) => {
-        console.log();
-        const { partners } = this.state;
-        partners.push(partner);
-        this.setState({ partners: partners });
-    };
-    toogleAddModal = () => {
-        this.setState({ newModalPartner: !this.state.newModalPartner });
-    };
-    onCloseFormAdd = () => {
-        this.setState({ newModalPartner: false });
-    };
+    // handleAddSubmit = (sharings) => {
+    //     console.log();
+    //     const { sharings } = this.state;
+    //     sharings.push(sharing);
+    //     this.setState({ sharings: sharings });
+    // };
+    // toogleAddModal = () => {
+    //     this.setState({ newModalSharing: !this.state.newModalSharing });
+    // };
+    // onCloseFormAdd = () => {
+    //     this.setState({ newModalSharing: false });
+    // };
 
-    deletePartner = (id) => {
-        axios
-            .delete(`http://localhost:8000/api/partner/` + id) //tham số truyền vào là id
-            .then((res) => {
-                console.log("Partner removed deleted");
-                this.getPartner();
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+    // deleteSharing = (id) => {
+    //     axios
+    //         .delete(`http://localhost:8000/api/sharing/` + id) //tham số truyền vào là id
+    //         .then((res) => {
+    //             console.log("Sharing removed deleted");
+    //             this.getSharing();
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // };
     render() {
         return (
             <div>
                 <div className="form-wrapper">
                     <div className="container">
-                        <h2>List of Partner</h2>
-                        <AddPartner
+                        <h2>List of Discover</h2>
+                        {/* <AddPartner
                             // newModalPartner={newModalPartner}
                             // toogleAddModal={this.toogleAddModal}
                             // onCloseForm={this.onCloseForm}
                             // handleAddSubmit={this.handleAddSubmit}
-                        />
+                        /> */}
                         <a className="btn" href="/indexAdmin"> Go Back </a>
                         <Table>
                             <thead>
                                 <tr className="text-primary">
                                     <th>ID</th>
-                                    <th>Partner </th>
+                                    <th>Title </th>
+                                    <th>Day</th>
                                     <th>Image</th>
-                                    <th>Action</th>
+                                    <th>Content</th>
+
                                 </tr>
                             </thead>
 
                             <tbody>
-                                {this.state.partners.map(partner =>
-                                    <tr key={partner.id}>
-                                        <td>{partner.id}</td>
-                                        <td>{partner.namecompany}</td>
+                                {this.state.discovers.map(discover =>
+                                    <tr key={discover.id}>
+                                        <td>{discover.id}</td>
+                                        <td>{discover.title}</td>
+                                        <td>{discover.day}</td>
                                         <td>
                                             <img
-                                                src={"assets/images/Partners/" + partner.image} 
+                                                src={"assets/images/Students/" + discover.image} 
                                                 width="200px"
                                                 height="150px"
                                             ></img>
                                         </td>
-
+                                        <td>{discover.content}</td>
                                         <td className="display=flex">
-                                            <Link
-                                                to={"/partner/" + partner.id + "/edit"}
+                                            {/* <Link
+                                                to={"/sharing/" + sharing.id + "/edit"}
                                                 className="edit-link"
-                                            >
+                                            > */}
                                                 <Button
                                                     color="success"
                                                     className="mr-3"
@@ -97,18 +100,18 @@ class ListPartner extends Component {
                                                 >
                                                     Edit
                                                 </Button>
-                                            </Link>
+                                            {/* </Link> */}
                                             <Button
                                                 color="danger"
                                                 size="sm"
-                                                onClick={(e) => {
-                                                    if (
-                                                        window.confirm(
-                                                            "Bạn có thật sự muốn xóa?"
-                                                        )
-                                                    )
-                                                        this.deletePartner(partner.id);
-                                                }}
+                                                // onClick={(e) => {
+                                                //     if (
+                                                //         window.confirm(
+                                                //             "Bạn có thật sự muốn xóa?"
+                                                //         )
+                                                //     )
+                                                //         this.deleteSharing(sharing.id);
+                                                // }}
                                             >
                                                 Delete
                                             </Button>
@@ -124,4 +127,4 @@ class ListPartner extends Component {
     }
 }
 
-export default ListPartner;
+export default ListDiscover;
