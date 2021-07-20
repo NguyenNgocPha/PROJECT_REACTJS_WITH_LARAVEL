@@ -14,26 +14,30 @@ class ListPartner extends Component {
         };
     }
 
-    componentDidMount() {
+    getPartner = () => {
         axios.get(`http://localhost:8000/api/partner`)
             .then(res => {
                 const partners = res.data;
                 this.setState({ partners });
             })
             .catch(error => console.log(error));
+    };
 
+    componentDidMount() {
+        this.getPartner();
     }
 
-  
     handleAddSubmit = (partner) => {
         console.log();
         const { partners } = this.state;
         partners.push(partner);
         this.setState({ partners: partners });
     };
+
     toogleAddModal = () => {
         this.setState({ newModalPartner: !this.state.newModalPartner });
     };
+
     onCloseFormAdd = () => {
         this.setState({ newModalPartner: false });
     };
@@ -50,16 +54,17 @@ class ListPartner extends Component {
             });
     };
     render() {
+        const {  partners, newModalPartner } = this.state;
         return (
             <div>
                 <div className="form-wrapper">
                     <div className="container">
                         <h2>List of Partner</h2>
                         <AddPartner
-                            // newModalPartner={newModalPartner}
-                            // toogleAddModal={this.toogleAddModal}
-                            // onCloseForm={this.onCloseForm}
-                            // handleAddSubmit={this.handleAddSubmit}
+                            newModalPartner={newModalPartner}
+                            toogleAddModal={this.toogleAddModal}
+                            onCloseForm={this.onCloseForm}
+                            handleAddSubmit={this.handleAddSubmit}
                         />
                         <a className="btn" href="/indexAdmin"> Go Back </a>
                         <Table>
@@ -79,7 +84,7 @@ class ListPartner extends Component {
                                         <td>{partner.namecompany}</td>
                                         <td>
                                             <img
-                                                src={"assets/images/Partners/" + partner.image} 
+                                                src={"assets/images/Partners/" + partner.image}
                                                 width="200px"
                                                 height="150px"
                                             ></img>
