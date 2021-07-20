@@ -26,25 +26,13 @@ class HomepageController extends Controller
         echo json_encode($campaign);
     }
 
-    public function getDiscover(){
-        $discover = Discover::all();
-        echo json_encode($discover);
-    }
-
-    public function getLeader(){
-        $leader = Leader::all();
-        echo json_encode($leader);
-    }
 
     public function getPartner(){
         $partner = Partner::all();
         echo json_encode($partner);
     }
 
-    public function getDonate(){
-        $donate = Donater::all();
-        echo json_encode($donate);
-    }
+   
 
     public function postDonate(Request $request)
     {
