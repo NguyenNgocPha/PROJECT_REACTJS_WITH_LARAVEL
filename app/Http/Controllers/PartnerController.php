@@ -6,16 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Partner;
 use Illuminate\Support\Facades\Validator;
 
-
-
 class PartnerController extends Controller
 {
-<<<<<<< HEAD
     private $status = 200;
-=======
-    
-    private $status=200;
->>>>>>> 4f32d5dcee1d8682df43005c6f323f7e4557ec49
     /**
      * Display a listing of the resource.
      *
@@ -26,9 +19,7 @@ class PartnerController extends Controller
         echo json_encode($partner);
     }
 
-
-
-    /**
+   /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -167,8 +158,4 @@ class PartnerController extends Controller
             'message' => 'Partner deleted'
         ]);
     }
-<<<<<<< HEAD
-=======
-  
->>>>>>> 4f32d5dcee1d8682df43005c6f323f7e4557ec49
 }
