@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class PartnerController extends Controller
 {
-    private $status=200;
+    private $status = 200;
     /**
      * Display a listing of the resource.
      *
@@ -86,7 +86,12 @@ class PartnerController extends Controller
      */
     public function show($id)
     {
-        //
+        $partner = Partner::find($id);
+        if (!is_null($partner)) {
+            return response()->json(["status" => $this->status, "success" => true, "data" => $partner]);
+        } else {
+            return response()->json(["status" => "failed", "success" => false, "message" => "Whoops! no partner found"]); //
+        }
     }
 
     /**
@@ -126,12 +131,12 @@ class PartnerController extends Controller
             $destinationPath = public_path('assets/images/Partners');
             $file->move($destinationPath, $name);
         }
-        $partner=Partner::find($id);
-        $partner->namecompany=$request->namecompany;
-        if($name==''){ 
-            $name=$partner->image;
-        } 
-        $partner->image=$name;
+        $partner = Partner::find($id);
+        $partner->namecompany = $request->input('namecompany');
+        if ($name == '') {
+            $name = $partner->image;
+        }
+        $partner->image = $name;
         $partner->save();
 
         return response()->json([
@@ -148,11 +153,10 @@ class PartnerController extends Controller
      */
     public function destroy($id)
     {
-        $partner=Partner::find($id);
+        $partner = Partner::find($id);
         $partner->delete();
         return response()->json([
             'message' => 'Partner deleted'
         ]);
     }
-    
 }
