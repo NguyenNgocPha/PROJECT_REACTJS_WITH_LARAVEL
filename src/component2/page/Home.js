@@ -7,6 +7,12 @@ import Login from '../auth/Login';
 import Footer from '../../Component/Footer';
 import ContentChild from '../../Component/Content/ContentChild';
 import Header from '../../Component/Header';
+import ListSharing from '../context/sharing/ListSharing';
+import ListLeader from '../context/leader/ListLeader';
+import ListDiscover from '../context/discover/ListDiscover';
+import ListCampaign from '../context/campaign/ListCampaign';
+
+import ListDonater from '../context/donater/ListDonater';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default class Home extends Component {
@@ -35,6 +41,22 @@ export default class Home extends Component {
             </Route>
             <Route exact path="/partner" >
               <ListPartner  />
+            </Route>
+            <Route exact path="/sharing" >
+              <ListSharing  />
+            </Route>
+            <Route exact path="/leader" >
+              <ListLeader  />
+            </Route>
+            <Route exact path="/discover" >
+              <ListDiscover  />
+            </Route>
+            <Route exact path="/campaign" >
+              <ListCampaign  />
+            </Route>
+           
+            <Route exact path="/donater" >
+              <ListDonater  />
             </Route>
             <div id="page-wrap">
               <div

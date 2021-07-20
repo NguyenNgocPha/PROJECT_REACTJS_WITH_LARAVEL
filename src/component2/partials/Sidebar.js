@@ -36,7 +36,31 @@ export default class Sidebar extends Component {
               <li>
                 <div className="w3-bar-block">
                   <a href="/partner">
-                    <i className="fa fa-list" aria-hidden="true"></i>List Partner
+                  <i className="fas fa-building"></i>List Partner
+                  </a>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div className="w3-bar-block">
+                  <a href="/sharing">
+                    <i className="fas fa-user"></i>List Sharing
+                  </a>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div className="w3-bar-block">
+                  <a href="/leader">
+                  <i className="fas fa-chalkboard-teacher"></i>List Leader
+                  </a>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div className="w3-bar-block">
+                  <a href="/discover">
+                  <i class="fab fa-cc-discover"></i>List Discovers
                   </a>
                 </div>
                 <hr />
@@ -44,23 +68,16 @@ export default class Sidebar extends Component {
               <li>
                 <div className="w3-bar-block">
                   <a href="/campaign">
-                    <i className="fas fa-user"></i>Campaign
+                  <i class="fas fa-play"></i>List Campaign
                   </a>
                 </div>
                 <hr />
               </li>
+           
               <li>
                 <div className="w3-bar-block">
-                  <a href="/admin/showEvent">
-                    <i className="fas fa-user"></i>Event
-                  </a>
-                </div>
-                <hr />
-              </li>
-              <li>
-                <div className="w3-bar-block">
-                  <a href="/admin/ListPartner">
-                    <i className="fas fa-user"></i>Partner
+                  <a href="/donater">
+                  <i class="fas fa-donate"></i>List Donater
                   </a>
                 </div>
                 <hr />

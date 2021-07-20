@@ -71,7 +71,7 @@ class ListPartner extends Component {
                             <thead>
                                 <tr className="text-primary">
                                     <th>ID</th>
-                                    <th>Name Company </th>
+                                    <th>Partner </th>
                                     <th>Image</th>
                                     <th>Action</th>
                                 </tr>
