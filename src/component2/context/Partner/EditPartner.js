@@ -4,7 +4,7 @@ import axios from "axios";
 export default class EditPartner extends Component {
     constructor(props) {
         super(props);
-        this.onChangeName = this.onChangeName.bind(this);
+        this.onChangeNameCommpany = this.onChangeNameCompany.bind(this);
         this.onChangeImage = this.onChangeImage.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
@@ -21,11 +21,10 @@ export default class EditPartner extends Component {
         // console.log("Hello");
         const  id  = this.props.match.params.id;  //lay id tu trinh duyet (đc truyền từ app.js trong thẻ Route)
         console.log(id);
-        axios.get('http://localhost:8000/api/partner/'+id)
+        axios.get(`http://localhost:8000/api/partner/`+id)
           .then(res => {
             this.setState({
-             name: res.data.data.name,
-           
+             namecompany: res.data.data.namecompany,
               image: res.data.data.image
             });
             console.log(res.data.data);
@@ -37,8 +36,8 @@ export default class EditPartner extends Component {
 
 
 
-    onChangeName = (e) => {
-        this.setState({ name: e.target.value });
+    onChangeNameCompany = (e) => {
+        this.setState({ namecompany: e.target.value });
     };
 
     onChangeImage = (e) => {
@@ -51,11 +50,11 @@ export default class EditPartner extends Component {
         const formData = new FormData();
         console.log(this.state.file);
         formData.append('image', fileInput?fileInput.files[0]:this.state.image);
-        formData.append('name', this.state.name);
+        formData.append('namecompany', this.state.namecompany);
         formData.append('_method', "put");
 
         axios
-        .post('http://localhost:8000/api/partner/'+this.props.match.params.id, formData)
+        .post(`http://localhost:8000/api/partner/`+this.props.match.params.id, formData)
         .then((res) => {
             console.log(res.data);
             if (res.data.status==="error") {
@@ -64,7 +63,7 @@ export default class EditPartner extends Component {
             else{
               console.log('Partner updated!');
               //this.props.history.push('/');
-              this.props.history.push("/");
+              
               
             }       
         })
@@ -88,8 +87,8 @@ export default class EditPartner extends Component {
                         <input
                             type="text"
                             name="name"
-                            onChange={this.onChangeName}
-                            value={this.state.name}
+                            onChange={this.onChangeNameCompany}
+                            value={this.state.namecompany}
                         />
                     </div>
                  
