@@ -25,3 +25,7 @@ Route::get('/discover',[HomepageController::class, 'getDiscover']);
 Route::get('/partner',[HomepageController::class, 'getPartner']);
 Route::get('/donater',[HomepageController::class, 'getDonate']);
 Route::post('/donater',[HomepageController::class, 'postDonate']);
+
+// Selection
+Route::get('/selection',[HomepageController::class, 'getSelection']);
+Route::post('/selection',[HomepageController::class, 'postSelection']);
