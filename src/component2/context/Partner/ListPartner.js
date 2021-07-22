@@ -59,7 +59,7 @@ class ListPartner extends Component {
             <div style={{ background: 'url(https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-light-pink-fluorescent-dotted-background-image_255310.jpg)' }}>
                 <div className="form-wrapper">
                     <div className="container">
-                        <h2 className="w3-sans-serif"  style={{textAlign:'center',color:'#0000FF'}}>List of Partner</h2>
+                        <h2 className="w3-cursive"  style={{textAlign:'center',color:'#0000FF'}}>List of Partner</h2>
                         <AddPartner
                             newModalPartner={newModalPartner}
                             toogleAddModal={this.toogleAddModal}

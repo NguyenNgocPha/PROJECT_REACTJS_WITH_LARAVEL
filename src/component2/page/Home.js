@@ -13,7 +13,6 @@ import ListDiscover from '../context/discover/ListDiscover';
 import ListCampaign from '../context/campaign/ListCampaign';
 import Profile from '../context/Profile';
 import ListDonater from '../context/donater/ListDonater';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import EditPartner from '../context/Partner/EditPartner';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
