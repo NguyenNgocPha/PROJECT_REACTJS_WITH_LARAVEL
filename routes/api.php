@@ -32,9 +32,12 @@ Route::resource('/discover',DiscoverController::class);
 Route::resource('/partner',PartnerController::class);
 Route::resource('/donater',DonaterController::class);
 //Route::post('/donater',HomepageController::class);
+Route::get('/countdonater',[DonaterController::class,'getCountDonater']);
+Route::get('/line-donater',[DonaterController::class,'getLineDonaterChart']);
+Route::get('/countpartner',[PartnerController::class,'getCountPartner']);
+Route::get('/countleader',[LeaderController::class,'getCountLeader']);
 
-
-
+Route::get('/countsharing',[SharingController::class,'getCountSharing']);
 // Route::get('token', function (Request $request) {
 //     $token = $request->session()->token();
 //     $token = csrf_token();

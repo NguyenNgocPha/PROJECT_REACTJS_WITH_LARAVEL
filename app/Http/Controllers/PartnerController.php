@@ -14,12 +14,17 @@ class PartnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
+    public function index()
+    {
         $partner = Partner::all();
         echo json_encode($partner);
     }
-
-   /**
+    public function getCountPartner()
+    {
+        $partners = Partner::all()->count();
+        return $partners;
+    }
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
