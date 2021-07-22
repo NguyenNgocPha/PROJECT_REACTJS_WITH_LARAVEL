@@ -84,7 +84,7 @@ class ListPartner extends Component {
                                         <td>{partner.namecompany}</td>
                                         <td>
                                             <img
-                                                src={"assets/images/Partners/" + partner.image}
+                                                src={"assets/images/Partners/" + partner.image }
                                                 width="200px"
                                                 height="150px"
                                             ></img>
