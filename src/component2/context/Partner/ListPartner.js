@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
 import axios from "axios";
 import AddPartner from "./AddPartner";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 class ListPartner extends Component {
     constructor(props) {
