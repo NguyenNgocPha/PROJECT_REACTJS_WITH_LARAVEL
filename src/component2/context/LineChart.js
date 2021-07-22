@@ -43,15 +43,16 @@ class LineChart extends Component {
         ]
       })
   }  
+
   render() {
     return (
-      <Chart
-        options={this.state.options}
-        series={this.state.series}
-        type="bar"
-        width="500" 
-        height="400"        
-      />
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="line"
+            width="500"  
+            height="400"        
+  />
     );
   }
 }
