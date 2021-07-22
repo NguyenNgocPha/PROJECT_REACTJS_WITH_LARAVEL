@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Chart from "react-apexcharts";
+import Chart from 'react-apexcharts';
 
 class LineChart extends Component {
   constructor(props) {

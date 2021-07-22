@@ -14,6 +14,7 @@ import ListCampaign from '../context/campaign/ListCampaign';
 
 import ListDonater from '../context/donater/ListDonater';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import EditPartner from '../context/Partner/EditPartner';
 
 export default class Home extends Component {
   render() {
@@ -42,6 +43,9 @@ export default class Home extends Component {
             </Route>
             <Route exact path="/partner" >
               <ListPartner  />
+            </Route>
+            <Route exact path="/partner/:id/edit" component={EditPartner}>
+              
             </Route>
             <Route exact path="/sharing" >
               <ListSharing  />

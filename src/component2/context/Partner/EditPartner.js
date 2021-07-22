@@ -59,6 +59,7 @@ export default class EditPartner extends Component {
                 }
                 else {
                     console.log('Partner updated!');
+                    window.location.href="/partner";
                 }
             })
             .catch((err) => {
