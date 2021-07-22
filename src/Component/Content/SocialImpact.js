@@ -7,6 +7,16 @@ export default class SocialImpact extends Component {
                 <section className="portfolio-area">
                     <div className="container text-center">    
                         <h3><b>PN Vietnam and 10 years of sustainable impact on Vietnam society</b></h3><br />
+                       {/* <p>
+                            <video width={640} height={480} controls>
+                                <source src="assets/images/videos/pnv.mp4" type="video/mp4" />
+                                <source src="assets/images/videos/pnv.ogg" type="video/ogg" />
+                            </video>
+                       </p><br /> */}
+                            <video width={640} height={480} controls>
+                                <source src="assets/images/videos/9.-PN-and-PNV-on-VTV4.mp4" type="video/mp4" />
+                                <source src="assets/images/videos/9.-PN-and-PNV-on-VTV4.ogg" type="video/ogg" />
+                            </video>
                         <div className="row pd-30">
                             <div className="col-sm-4">
                                 <h1 style={{color: '#18A0FB'}}><b><span data-number="500">500</span></b></h1>

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
 import axios from "axios";
 import AddPartner from "./AddPartner";
-import { Link } from "react-router-dom";
-import "./Partner.css";
+import { Link } from 'react-router-dom';
+
 class ListPartner extends Component {
     constructor(props) {
         super(props);
@@ -88,7 +88,7 @@ class ListPartner extends Component {
                                         <td>{partner.namecompany}</td>
                                         <td>
                                             <img
-                                                src={"assets/images/Partners/" + partner.image}
+                                                src={"assets/images/Partners/" + partner.image }
                                                 width="200px"
                                                 height="150px"
                                             ></img>

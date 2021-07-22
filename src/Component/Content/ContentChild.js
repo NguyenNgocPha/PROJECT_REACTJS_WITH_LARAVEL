@@ -3,7 +3,7 @@ import Managers from './Managers';
 import Partners from './Partners';
 import DonateForm from './DonateForm';
 import Student_Speech from './Student_Speech';
-import ValuePNV from './ValuePNV';
+import Selection from './Selection';
 import Mission from './Mission';
 import SocialImpact from './SocialImpact';
 import Testimonials from './Testimonials';
@@ -17,7 +17,7 @@ export default class ContentChild extends Component {
                 <Image />
                 <Mission />
                 <SocialImpact />
-                <ValuePNV />
+                <Selection />
                 <Student_Speech />
                 <DonateForm />
                 <Testimonials/>

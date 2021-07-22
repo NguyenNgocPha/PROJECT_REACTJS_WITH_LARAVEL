@@ -13,6 +13,8 @@ import ListDiscover from '../context/discover/ListDiscover';
 import ListCampaign from '../context/campaign/ListCampaign';
 import Profile from '../context/Profile';
 import ListDonater from '../context/donater/ListDonater';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import EditPartner from '../context/Partner/EditPartner';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 export default class Home extends Component {
@@ -42,6 +44,9 @@ export default class Home extends Component {
             </Route>
             <Route exact path="/partner" >
               <ListPartner  />
+            </Route>
+            <Route exact path="/partner/:id/edit" component={EditPartner}>
+              
             </Route>
             <Route exact path="/sharing" >
               <ListSharing  />
