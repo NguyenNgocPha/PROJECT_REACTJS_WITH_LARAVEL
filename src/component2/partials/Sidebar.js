@@ -11,6 +11,7 @@ export default class Sidebar extends Component {
           <nav
             id="sidebar"
             className="w3-sidebar w3-collapse w3-dark w3-animate-left"
+
           >
             <br></br>
             <ul className="list-unstyled components">
@@ -36,7 +37,7 @@ export default class Sidebar extends Component {
               <li>
                 <div className="w3-bar-block">
                   <a href="/partner">
-                  <i className="fas fa-building"></i>List Partner
+                    <i className="fas fa-building"></i>List Partner
                   </a>
                 </div>
                 <hr />
@@ -52,7 +53,7 @@ export default class Sidebar extends Component {
               <li>
                 <div className="w3-bar-block">
                   <a href="/leader">
-                  <i className="fas fa-chalkboard-teacher"></i>List Leader
+                    <i className="fas fa-chalkboard-teacher"></i>List Leader
                   </a>
                 </div>
                 <hr />
@@ -60,7 +61,7 @@ export default class Sidebar extends Component {
               <li>
                 <div className="w3-bar-block">
                   <a href="/discover">
-                  <i class="fab fa-cc-discover"></i>List Discovers
+                    <i class="fab fa-cc-discover"></i>List Discovers
                   </a>
                 </div>
                 <hr />
@@ -68,16 +69,24 @@ export default class Sidebar extends Component {
               <li>
                 <div className="w3-bar-block">
                   <a href="/campaign">
-                  <i class="fas fa-play"></i>List Campaign
+                    <i class="fas fa-play"></i>List Campaign
                   </a>
                 </div>
                 <hr />
               </li>
-           
+
               <li>
                 <div className="w3-bar-block">
                   <a href="/donater">
-                  <i class="fas fa-donate"></i>List Donater
+                    <i class="fas fa-donate"></i>List Donater
+                  </a>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div className="w3-bar-block">
+                  <a href="/profile">
+                    <i class="fas fa-user"></i>Profile
                   </a>
                 </div>
                 <hr />

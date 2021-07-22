@@ -11,10 +11,10 @@ import ListSharing from '../context/sharing/ListSharing';
 import ListLeader from '../context/leader/ListLeader';
 import ListDiscover from '../context/discover/ListDiscover';
 import ListCampaign from '../context/campaign/ListCampaign';
-
+import Profile from '../context/Profile';
 import ListDonater from '../context/donater/ListDonater';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 export default class Home extends Component {
   render() {
     return (
@@ -23,7 +23,7 @@ export default class Home extends Component {
           <Route exact path="/">
             <Header />
             <ContentChild />
-            <Footer />
+            <Footer /> 
           </Route>
           <Route path="/admin">
             <Login />
@@ -58,6 +58,9 @@ export default class Home extends Component {
            
             <Route exact path="/donater" >
               <ListDonater  />
+            </Route>
+            <Route exact path="/profile" >
+              <Profile  />
             </Route>
             <div id="page-wrap">
               <div
