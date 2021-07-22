@@ -131,7 +131,7 @@ class PartnerController extends Controller
             $file->move($destinationPath, $name);
         }
         $partner = Partner::find($id);
-        $partner->namecompany = $request->input('namecompany');
+        $partner->namecompany = $request->namecompany;
         if ($name == '') {
             $name = $partner->image;
         }
