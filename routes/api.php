@@ -25,19 +25,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-<<<<<<< HEAD
-Route::get('/sharing',[HomepageController::class, 'getSharing']);
-Route::get('/campaign',[HomepageController::class, 'getCampaign']);
-Route::get('/leader',[HomepageController::class, 'getLeader']);
-Route::get('/discover',[HomepageController::class, 'getDiscover']);
-Route::get('/partner',[HomepageController::class, 'getPartner']);
-Route::get('/donater',[HomepageController::class, 'getDonate']);
-Route::post('/donater',[HomepageController::class, 'postDonate']);
-
-// Selection
-Route::get('/selection',[HomepageController::class, 'getSelection']);
-Route::post('/selection',[HomepageController::class, 'postSelection']);
-=======
 Route::resource('/sharing',SharingController::class);
 Route::resource('/campaign',CampaignController::class);
 Route::resource('/leader',LeaderController::class);
@@ -58,4 +45,3 @@ Route::get('/countsharing',[SharingController::class,'getCountSharing']);
 // });
 Route::post('/loginAdmin',[HomepageController::class, 'postLoginAdmin']);
 Route::resource('partner',PartnerController::class);
->>>>>>> b1098a85b92075bc40e8daeae5e1794fd41c7949
