@@ -32,7 +32,7 @@ export default class Managers extends Component {
                             <div className="col-lg-12">
                                 <div className="row testimonial-active">
                                 { this.state.leaders.map(leader => 
-                                    <div className="col-lg-4">
+                                    <div key={leader.id} className="col-lg-4">
                                         <div className="single-testimonial mt-30 mb-30 text-center">
                                             <div className="testimonial-image">
                                                 <img src={"assets/images/My Teacher/"+leader.image} alt="Author" className="coNgoc" />

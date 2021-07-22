@@ -26,7 +26,7 @@ export default class DonateForm extends Component {
             })
             .catch(error => console.log(error));
     }
-    
+
     onChangeName = (e) => {
         this.setState({ name: e.target.value });
     }
@@ -74,8 +74,8 @@ export default class DonateForm extends Component {
                             </div>
                         </div>
                         <div className="row">
-                        {this.state.campaigns.map(campaign =>
-                                <div className="col-lg-6">
+                            {this.state.campaigns.map(campaign =>
+                                <div key={campaign.id} className="col-lg-6">
                                     <div className="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                         <h5>Campaign {campaign.id}</h5><br />
                                         <h3 className="contact-title">{campaign.name}</h3>

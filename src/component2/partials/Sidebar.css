@@ -1,0 +1,131 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: black;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 15px;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: white;
+  padding: 0.8em;
+}
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#sidebar{
+  position: fixed;
+  background-color: #373a47;
+}
+img{
+  width: 100px;
+  height:100px;
+}
+.w3-row{
+  text-align: center;
+}
+.w3-bar-block{
+  text-align: left;
+}
+.fa-tachometer-alt{
+  margin-right: 10px;
+}
+.fa-list{
+  margin-right: 10px;
+}
+.fa-user{
+  margin-right: 10px;
+}
+.fa-sign-out-alt{
+   margin-right: 10px;
+}
+.fa-building{
+  margin-right: 10px;
+}
+.fa-chalkboard-teacher{
+  margin-right: 10px;
+}
+.fa-cc-discover{
+  margin-right: 10px;
+}
+.fa-play{
+  margin-right: 10px;
+}
+.fa-donate{
+  margin-right: 10px;
+}
+.w3-bar-block a:hover{
+  color:orange;
+  text-decoration: none;
+}
+.w3-container{
+  margin-bottom: 30px;
+}
+hr{
+  height: 1px;
+  color:rgb(250, 242, 234);
+}
+
+.w3-bar-block button{
+  border-style: none;
+  background-color: #373a47;
+
+}
+
+.w3-bar-block button:hover{
+  border-style: none;
+  color: orange;
+
+}
