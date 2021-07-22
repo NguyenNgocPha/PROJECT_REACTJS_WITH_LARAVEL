@@ -3,6 +3,7 @@ import { Table, Button } from "reactstrap";
 import axios from "axios";
 // import AddPartner from "./AddPartner";
 import { Link } from "react-router-dom";
+import AddCampaign from "./AddCampaign";
 
 class ListCampaign extends Component {
     constructor(props) {
@@ -24,43 +25,55 @@ class ListCampaign extends Component {
 
     }
 
+    getCampaign = () => {
+        axios.get(`http://localhost:8000/api/campaign`)
+            .then(res => {
+                const campaigns = res.data;
+                this.setState({ campaigns });
+            })
+            .catch(error => console.log(error));
+    };
+    componentDidMount() {
+        this.getCampaign();
+    }
   
-    // handleAddSubmit = (sharings) => {
-    //     console.log();
-    //     const { sharings } = this.state;
-    //     sharings.push(sharing);
-    //     this.setState({ sharings: sharings });
-    // };
-    // toogleAddModal = () => {
-    //     this.setState({ newModalSharing: !this.state.newModalSharing });
-    // };
-    // onCloseFormAdd = () => {
-    //     this.setState({ newModalSharing: false });
-    // };
+    handleAddSubmit = (campaign) => {
+        console.log();
+        const { campaigns } = this.state;
+        campaigns.push(campaign);
+        this.setState({ campaigns: campaigns });
+    };
+    toogleAddModal = () => {
+        this.setState({ newModalCampaign: !this.state.newModalCampaign });
+    };
+    onCloseFormAdd = () => {
+        this.setState({ newModalCampaign: false });
+    };
 
-    // deleteSharing = (id) => {
-    //     axios
-    //         .delete(`http://localhost:8000/api/sharing/` + id) //tham số truyền vào là id
-    //         .then((res) => {
-    //             console.log("Sharing removed deleted");
-    //             this.getSharing();
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         });
-    // };
+    deleteCampaign = (id) => {
+        axios
+            .delete(`http://localhost:8000/api/campaign/` + id) //tham số truyền vào là id
+            .then((res) => {
+                console.log("Campaign removed deleted");
+                this.getCampaign();
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
     render() {
+        const {  campaigns, newModalCampaign } = this.state;
         return (
             <div>
                 <div className="form-wrapper">
                     <div className="container">
                         <h2>List of Campaigns</h2>
-                        {/* <AddPartner
-                            // newModalPartner={newModalPartner}
-                            // toogleAddModal={this.toogleAddModal}
-                            // onCloseForm={this.onCloseForm}
-                            // handleAddSubmit={this.handleAddSubmit}
-                        /> */}
+                        <AddCampaign
+                            newModalCampaign={newModalCampaign}
+                            toogleAddModal={this.toogleAddModal}
+                            onCloseForm={this.onCloseForm}
+                            handleAddSubmit={this.handleAddSubmit}
+                        />
                         <a className="btn" href="/indexAdmin"> Go Back </a>
                         <Table>
                             <thead>
@@ -83,10 +96,10 @@ class ListCampaign extends Component {
                                        
                                         
                                         <td className="display=flex">
-                                            {/* <Link
-                                                to={"/sharing/" + sharing.id + "/edit"}
+                                            <Link
+                                                to={"/campaign/" + campaign.id + "/edit"}
                                                 className="edit-link"
-                                            > */}
+                                            >
                                                 <Button
                                                     color="success"
                                                     className="mr-3"
@@ -94,18 +107,18 @@ class ListCampaign extends Component {
                                                 >
                                                     Edit
                                                 </Button>
-                                            {/* </Link> */}
+                                            </Link>
                                             <Button
                                                 color="danger"
                                                 size="sm"
-                                                // onClick={(e) => {
-                                                //     if (
-                                                //         window.confirm(
-                                                //             "Bạn có thật sự muốn xóa?"
-                                                //         )
-                                                //     )
-                                                //         this.deleteSharing(sharing.id);
-                                                // }}
+                                                onClick={(e) => {
+                                                    if (
+                                                        window.confirm(
+                                                            "Bạn có thật sự muốn xóa?"
+                                                        )
+                                                    )
+                                                        this.deleteCampaign(campaign.id);
+                                                }}
                                             >
                                                 Delete
                                             </Button>

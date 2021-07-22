@@ -24,9 +24,10 @@
 ===========================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif ;
   font-weight: normal;
   font-style: normal;
+  font-size: 18px;
   color: #121212;
   overflow-x: hidden; }
 
@@ -122,15 +123,17 @@ p {
     position: relative
 }
 
-.intro-engage>div h2 {
+.intro-engage>div h3 {
     color: #fff;
     font-family: "Anton", sans-serif;
     text-transform: uppercase;
-    letter-spacing: .1rem
+    letter-spacing: .1rem;
+    text-align: center;
+    font-weight:bold;
 }
 
 .intro-engage>div p {
-    color: rgba(255, 255, 255, .5)
+    color: #f4f6f7;
 }
 
 .intro-engage>div:before {
@@ -165,7 +168,7 @@ p {
 ===========================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif ;
   font-weight: normal;
   font-style: normal;
   color: #121212;
@@ -203,7 +206,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif ;
   font-weight: 600;
   color: #121212;
   margin: 0px; }
@@ -247,6 +250,7 @@ p {
 
 /*==== Section Title =====*/
 .section-title .title {
+  align-items: center;
   font-size: 35px;
   font-weight: 600px;
   color: #000;
@@ -581,7 +585,7 @@ p {
   .rounded-buttons ul li:first-child {
     margin-left: 0; }
 .rounded-buttons .main-btn {
-  border-radius: 50px; }
+  border-radius: 2px; }
 .rounded-buttons .rounded-one {
   border-color: #38f9d7;
   color: #38f9d7; }
@@ -831,12 +835,13 @@ p {
       .navbar-area .navbar .navbar-nav .nav-item {
         position: relative; }
         .navbar-area .navbar .navbar-nav .nav-item a {
+          font-family: Arial, Helvetica, sans-serif ;
           font-size: 16px;
           line-height: 24px;
           font-weight: 700;
           padding: 11px 16px;
           color: #18A0FB;
-          text-transform: capitalize;
+          text-transform: uppercase;
           position: relative;
           border-radius: 5px;
           -webkit-transition: all 0.3s ease-out 0s;
@@ -887,7 +892,7 @@ p {
           -ms-transform: translateX(-50%) scaleX(1);
           -o-transform: translateX(-50%) scaleX(1);
           transform: translateX(-50%) scaleX(1); }
-        /* .navbar-area .navbar .navbar-nav .nav-item .sub-menu {
+        .navbar-area .navbar .navbar-nav .nav-item .sub-menu {
           position: absolute;
           right: 0;
           top: 100%;
@@ -904,11 +909,11 @@ p {
           z-index: 99;
           -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
           -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16); } */
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16); }
           @media only screen and (min-width: 768px) and (max-width: 991px) {
             .navbar-area .navbar .navbar-nav .nav-item .sub-menu {
               position: relative !important;
-              /* width: 100% !important;
+              width: 100% !important;
               left: 0 !important;
               top: auto !important;
               opacity: 1 !important;
@@ -929,7 +934,7 @@ p {
               -moz-box-shadow: none;
               box-shadow: none;
               text-align: left;
-              border-top: 0;  */
+              border-top: 0; 
             } }
           @media (max-width: 767px) {
             .navbar-area .navbar .navbar-nav .nav-item .sub-menu {
@@ -2100,6 +2105,30 @@ p {
 /*===========================
         28.ERROR css 
 ===========================*/
+
+#age{
+  margin-left: -15px;
+}
+
+#phone{
+  margin-left: 15px;
+}
+.age{
+  margin-left: -14px;
+}
+
+.phone{
+  margin-left: 14px;
+}
+.phone-age{
+  display: flex;
+}
+
+.btnSelection{
+  margin-left: 160px;
+}
+
+
 .testimonial-area {
   padding-top: 90px;
   padding-bottom: 70px;
@@ -2411,9 +2440,16 @@ p {
     22.HEADER css 
 ===========================*/
 .flag{
+  margin-top: 20px;
   width: 35px;
   height: 35px;
 }
+
+ li .flag1{
+  margin-left: 150px;
+}
+
+
 .footer-area{
   background-color: #252B42;
 }
@@ -2538,14 +2574,34 @@ p {
 
 /* VALUE PNV */
 
-
 .head{
   padding: 30px;
   font-size: 35px;
   margin-left: 42%;
 }
 
+.container-selection{
+  display: flex;
+}
 
+.img-selection{
+  margin-top: 53%;
+  margin-left: 10px;
+}
+
+.form_selection{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1); 
+  }
+    /* .single-testimonial .testimonial-image img {
+      width: 150px;
+      border-radius: 50%;
+      display: inline-block; 
+    } */
 
 /* Container for flexboxes */
 .valueCenter {
@@ -2627,7 +2683,7 @@ nav {
   display: flex;
 }
 
-center, h4{
+center, strong{
   color: #F4A305;
 }
 
@@ -2700,5 +2756,103 @@ center, h4{
   transform: translateX(0)
 }
 
-/* END NUMBER */
 
+.training{
+  display: flex;
+}
+
+.training ul {
+  padding-left: 30px;
+}
+
+#curricula h3, .ul-training{
+  margin-left: 100px;
+}
+
+.ul-training {
+  margin-left: 130px;
+  color: #0067f4
+}
+
+
+/* Value */
+.our-value{
+  align-items: center;
+  margin-left: 150px;
+}
+
+.five-value{
+  text-align: center;
+  margin-top: 100px;
+  color: #0067f4;
+}
+
+.five-value h2{
+  color: #0067f4;
+}
+
+.five-value .trust-text, .solidarity-text, .approach-text{
+  color: #fd5f00;
+}
+
+.five-value .solidarity-text, .approach-text{
+  color: #fd5f00;
+}
+
+.five-value .approach-text{
+  color: #fd5f00;
+}
+
+.trust{
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-left: 240px;
+}
+
+.approach{
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.responsibility{
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-left: 240px;
+}
+
+.solidarity{
+  width: 150px;
+  height: 150px;
+  margin-left: 140px;
+}
+
+.respect{
+  width: 200px;
+  height: 200px;
+  margin-left: 210px;
+  padding-top: 50px;
+}
+
+/* Header */
+.carousel-btn .slider2{
+  align-items: flex-start;
+  text-align: left;
+  color:#ffffff;
+  opacity:none;
+}
+
+
+.carousel-btn li a{
+  align-items: flex-start;
+  text-align: left;
+  margin-right: 465px;
+}
+/* END NUMBER */

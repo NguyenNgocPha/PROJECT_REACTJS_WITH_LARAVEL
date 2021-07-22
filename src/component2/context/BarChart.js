@@ -26,7 +26,7 @@ class LineChart extends Component {
   }
 
   getData(){
-    fetch("https://whispering-hollows-85804.herokuapp.com/api/admin/story-line-chart")
+    fetch("http://localhost:8000/api/line-donater")
     .then(response => {
             response.json().then((data1) =>  {
             this.updateUI(data1);

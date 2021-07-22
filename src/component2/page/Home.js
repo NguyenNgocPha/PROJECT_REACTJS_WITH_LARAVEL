@@ -34,6 +34,7 @@ export default class Home extends Component {
               pageWrapId={'page-wrap'}
               outerContainerId={'outer-container'}
               />
+              
             </Route>
             <Route exact path="/dashboard" >
               <Dashboard
@@ -88,6 +89,7 @@ export default class Home extends Component {
                 </div>
               </div>
             </div>
+            
           </div>
 
         </Switch>
