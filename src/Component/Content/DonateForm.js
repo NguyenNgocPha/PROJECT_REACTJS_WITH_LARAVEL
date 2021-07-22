@@ -63,7 +63,7 @@ export default class DonateForm extends Component {
         return (
             <div>
                 {/*====== DONATE FORM START ======*/}
-                <section id="contact" className="portfolio-area">
+                <section id="ITRaisesIT" className="portfolio-area">
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-6">
@@ -97,21 +97,21 @@ export default class DonateForm extends Component {
                                 <div className="contact-form form-style-one mt-35 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                     <form id="contact-form" onSubmit={this.handleAddSubmit} encType="multipart/form-data" method="post">
                                         <div className="form-input mt-15">
-                                            <label>Name</label>
+                                            <h5>Name</h5>
                                             <div className="input-items default">
                                                 <input type="text" placeholder="Name" name="name" onChange={this.onChangeName} />
                                                 <i className="lni-user" />
                                             </div>
                                         </div>
                                         <div className="form-input mt-15">
-                                            <label>Email</label>
+                                            <h5>Email</h5>
                                             <div className="input-items default">
                                                 <input type="email" placeholder="Email" name="email" onChange={this.onChangeEmail} />
                                                 <i className="lni-envelope" />
                                             </div>
                                         </div>
                                         <div className="form-input mt-15">
-                                            <label>Phone</label>
+                                            <h5>Phone</h5>
                                             <div className="input-items default">
                                                 <input type="phone" placeholder="Phone" name="phone" onChange={this.onChangePhone} />
                                                 <i className="fa fa-phone" />

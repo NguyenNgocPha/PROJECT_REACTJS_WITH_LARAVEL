@@ -14,7 +14,7 @@ export default class Mission extends Component {
                     <div className="mission">
                         <div className="col-md-6">
                             <div className="single-testimonial mt-30 mb-30">
-                                <center><h4>Our mission</h4></center><br />
+                                <center><h3><strong>Our mission</strong></h3></center><br />
                                 <div>
                                     <p>Our mission is to provide education, technical and professional
                                     training in the digital sector to young underprivileged people 
@@ -32,7 +32,7 @@ export default class Mission extends Component {
                 
                         <div className="col-md-6">
                             <div className="single-testimonial mt-30 mb-30">
-                                <center><h4>Our objectives</h4></center> <br />
+                                <center><h3><strong>Our objectives</strong></h3></center> <br />
                                 <div>
                                     <p>PN’s objective is that at least 90% of the students enrolled 
                                     in our programs can escape poverty, be professionally more successful
@@ -45,6 +45,59 @@ export default class Mission extends Component {
                             </div>
                         </div>
                     </div>
+
+                    {/* Value */}
+
+
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="trust">
+                                            <img src="assets/images/Value_PNV/icon-trust.png" alt="Avatar" style={{width: '400px'}} />
+                                        </div>                            
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-2">
+                                        <div className="approach">
+                                            <img src="assets/images/Value_PNV/approach-icon.png" alt="Avatar" style={{width: '400px'}} />
+                                        </div>                            
+                                    </div>
+
+                                    <div className="col-md-2">
+                                        <div className="solidarity">
+                                            <img src="assets/images/Value_PNV/solidarity-icon.png" alt="Avatar" style={{width: '400px'}} />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-2">
+                                        <div className="responsibility">
+                                            <img src="assets/images/Value_PNV/responsibility-icon.png" alt="Avatar" style={{width: '400px'}} />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="respect">
+                                            <img src="assets/images/Value_PNV/Respect.png" alt="Avatar" style={{width: '400px'}} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">           
+                                <ul className="five-value">
+                                    <li><h2 className="trust-text">Trust</h2></li>
+                                    <li><h2 >Responsibility</h2></li>
+                                    <li><h2 className="solidarity-text">Solidarity</h2></li>
+                                    <li><h2>Respect</h2></li>
+                                    <li><h2 className="approach-text">Demanding approach</h2></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
         )
     }

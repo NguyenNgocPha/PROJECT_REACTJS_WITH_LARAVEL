@@ -41,17 +41,10 @@ export default class Header extends Component {
                                     </button>
                                     <div className="collapse navbar-collapse sub-menu-bar" id="navbarEight">
                                     <ul className="navbar-nav ml-auto">
-                                        <li>
-                                            <a href="#"><img src="assets/images/flag/Vietnam.png" alt="Logo" className="flag" /></a>
+                                        <li className="nav-item">
+                                            <a className="page-scroll" href="#selection">Selection</a>
                                         </li>
-                                        <li >
-                                            <a href="#"><img src="assets/images/flag/American.png" alt="Logo" className="flag" /></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="assets/images/flag/English.png" alt="Logo" className="flag" /></a>
-                                        </li>
-
-                                        {/* <li className="nav-item">
+                                        <li className="nav-item">
                                         <a className="page-scroll" href="#ITRaisesIT">ITRaisesIT</a>
                                         </li>
                                         <li className="nav-item">
@@ -62,7 +55,16 @@ export default class Header extends Component {
                                         </li>
                                         <li className="nav-item">
                                         <a className="page-scroll" href="#client">Partners</a>
-                                        </li> */}
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/images/flag/Vietnam.png" alt="Logo" className="flag" /></a>
+                                        </li>
+                                        <li >
+                                            <a href="#"><img src="assets/images/flag/American.png" alt="Logo" className="flag" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/images/flag/English.png" alt="Logo" className="flag" /></a>
+                                        </li>
                                     </ul>
                                     </div>
                                     <div className="navbar-btn d-none mt-15 d-lg-inline-block">
@@ -84,13 +86,33 @@ export default class Header extends Component {
                             <li data-target="#carouselOne" data-slide-to={2} />
                             </ol>
                             <div className="carousel-inner">
-                            <div className="carousel-item bg_cover active" style={{backgroundImage: 'url(assets/images/Slide/slide1.jpg)'}}>
+                            <div className="carousel-item bg_cover active"  style={{backgroundImage: 'url(assets/images/Slide/slide1.jpg)', opacity: 0.8}}>
+                                <div className="carousel-caption">
+                                    <div className="container">
+                                        <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
+                                        <div className="row">
+                                            <ul className="carousel-btn rounded-buttons">
+                                                <h2 className="slider2">Passerelles numériques means “digital bridge“, a metaphor for providing free IT training programs to underprivileged youth.</h2>
+                                                <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
+                                            </ul>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="carousel-item bg_cover" style={{backgroundImage: 'url(assets/images/Slide/study.jpg)', opacity: 0.8}}>
                                 <div className="carousel-caption">
                                 <div className="container">
-                                    <div className="row justify-content-center">
+                                    <div className="row">
                                     <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
-                                        <ul className="carousel-btn rounded-buttons">
-                                        <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
+                                        <ul className="carousel-btn rounded-buttons text-right">
+                                            <h1 className="slider2">Our actions in Vietnam</h1>
+                                            <h2 className="slider2">Launched in 2010 in Danang, Passerelles numériques Vietnam (PNV) offers full scholarships to our 3-year, 
+                                                high-quality IT training program in: Web Development, Mobile Development & Automated Testing. Each of these 
+                                                specializations is taught holistically, 
+                                                including both technical and soft skills alongside a robust personal development program.</h2>
+                                            <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
                                         </ul>
                                     </div>
                                     </div>
@@ -98,27 +120,14 @@ export default class Header extends Component {
                                 </div>
                             </div>
 
-                            <div className="carousel-item bg_cover" style={{backgroundImage: 'url(assets/images/Slide/student_TN.JPG)'}}>
+                            <div className="carousel-item bg_cover" style={{backgroundImage: 'url(assets/images/Slide/beach.JPG)', opacity: 0.8}}>
                                 <div className="carousel-caption">
                                 <div className="container">
-                                    <div className="row justify-content-center">
-                                    <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
-                                        <ul className="carousel-btn rounded-buttons">
-                                        <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
-                                        </ul>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div className="carousel-item bg_cover" style={{backgroundImage: 'url(assets/images/Slide/learningLo.JPG)'}}>
-                                <div className="carousel-caption">
-                                <div className="container">
-                                    <div className="row justify-content-center">
+                                    <div className="row">
                                         <div className="col-xl-6 col-lg-7 col-sm-10 pd-50">
                                             <ul className="carousel-btn rounded-buttons">
-                                            <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
+                                                <h2 className="slider2">Since 2010, PN Vietnam has transformed the lives of more than 500 underprivileged youth through IT education.</h2>
+                                                <li><a className="main-btn rounded-three" href="#">DONATE</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -138,17 +147,17 @@ export default class Header extends Component {
                     </div>
                     {/*=========== SLIDER END ==================  */}
                     <div className="d-block d-md-flex intro-engage">
-                        <div className="">
-                            <h2>Equality between genders</h2>
+                        <div className="col-md-4">
+                            <h3>Equality between genders</h3>
                             <p>PN strives to enrol a ratio of at least 50% girls (or a maximum of two thirds) at each of our centers.</p>
                         </div>
-                        <div className="">
-                            <h2>No Poverty</h2>
+                        <div className="col-md-4">
+                            <h3>No Poverty</h3>
                             <p>At least 90% of the students enrolled in our programs can escape poverty, be
                             professionally more successful relatively to the national average, and take advantage of a ‘Gateway for Life’.</p>
                         </div>
-                        <div className="">
-                            <h2>Free Education</h2>
+                        <div className="col-md-4">
+                            <h3>Free Education</h3>
                             <p>Our students stay together in Danang for 3 years for their studies, with all academic and daily expenses 
                             covered by PNV. </p>
                         </div>

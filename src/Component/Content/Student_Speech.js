@@ -31,19 +31,7 @@ export default class Student_Speech extends Component {
                                 </div> {/* row */}
                             </div>
                         </div> {/* row */}
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="portfolio-menu pt-30 text-center">
-                                    <ul>
-                                        <li data-filter="*" className="active">All</li>
-                                        <li data-filter=".branding-3">Image</li>
-                                        <li data-filter=".planning-3">Information 1</li>
-                                        <li data-filter=".marketing-3">Information 2</li>
-                                        <li data-filter=".research-3">Content</li>
-                                    </ul>
-                                </div> {/* portfolio menu */}
-                            </div>
-                        </div> {/* row */}
+                        
                         { this.state.discovers.map(discover => 
                         <div className="row grid">
                             <div className="col-lg-6 col-sm-8 branding-3 planning-3">
