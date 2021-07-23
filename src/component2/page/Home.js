@@ -14,8 +14,11 @@ import ListCampaign from '../context/campaign/ListCampaign';
 import Profile from '../context/Profile';
 import ListDonater from '../context/donater/ListDonater';
 import EditPartner from '../context/Partner/EditPartner';
-
+import EditLeader from '../context/leader/EditLeader';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import EditSharing from '../context/sharing/EditSharing';
+import EditDiscover from '../context/discover/EditDiscover';
+import EditCampaign from '../context/campaign/EditCampaign';
 export default class Home extends Component {
   render() {
     return (
@@ -50,16 +53,27 @@ export default class Home extends Component {
             <Route exact path="/sharing" >
               <ListSharing  />
             </Route>
+            <Route exact path="/sharing/:id/edit" component={EditSharing}>
+              
+            </Route>
             <Route exact path="/leader" >
               <ListLeader  />
+            </Route>
+            <Route exact path="/leader/:id/edit" component={EditLeader}>
+              
             </Route>
             <Route exact path="/discover" >
               <ListDiscover  />
             </Route>
+            <Route exact path="/discover/:id/edit" component={EditDiscover}>
+              
+            </Route>
             <Route exact path="/campaign" >
               <ListCampaign  />
             </Route>
-           
+            <Route exact path="/campaign/:id/edit" component={EditCampaign}>
+              
+            </Route>
             <Route exact path="/donater" >
               <ListDonater  />
             </Route>
