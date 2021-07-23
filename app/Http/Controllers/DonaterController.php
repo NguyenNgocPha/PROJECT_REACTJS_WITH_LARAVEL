@@ -12,6 +12,7 @@ class DonaterController extends Controller
         echo json_encode($donate);
     }
      
+    
 public function getCountDonater()
 {
     $donates = Donater::all()->count();
