@@ -112,7 +112,7 @@ export default class Selection extends Component {
               </div>
 
               <div  className="training">
-                <div className="col-md-6">
+                <div className="col-md-6" id="training">
                   <h3>Training and education program</h3>
                   <p>A solid technical and practical 3-year training in Software Development & Testing</p>
                   <p>A general training in professional skills</p>

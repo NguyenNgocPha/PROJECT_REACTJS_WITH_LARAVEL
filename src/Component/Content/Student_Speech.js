@@ -21,7 +21,7 @@ export default class Student_Speech extends Component {
                 <section id="portfolio" className="portfolio-area">
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-lg-6">
+                            <div className="col-md-10">
                                 <div className="section-title text-center pb-20">
                                     <h3 className="title"><b>DISCOVER</b></h3>
                                     <p className="text">Launched in 2010 in Danang, Passerelles numériques Vietnam (PNV) offers full
@@ -34,14 +34,14 @@ export default class Student_Speech extends Component {
                         
                         { this.state.discovers.map(discover => 
                         <div key={discover.id} className="row grid">
-                            <div className="col-lg-6 col-sm-8 branding-3 planning-3">
+                            <div className="col-md-6 col-sm-8 branding-3 planning-3">
                                 <div className="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                     <div className="portfolio-image">
                                         <img src={"assets/images/Students/" + discover.image} alt="" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-5 col-sm-5 marketing-3 research-3">
+                            <div className="col-md-5 col-sm-5 marketing-3 research-3">
                                 <div className="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
                                     <div className="portfolio-image">
                                         <h6>“{discover.title}”</h6><br />
