@@ -45,3 +45,5 @@ Route::get('/countsharing',[SharingController::class,'getCountSharing']);
 // });
 Route::post('/loginAdmin',[HomepageController::class, 'postLoginAdmin']);
 Route::resource('partner',PartnerController::class);
+Route::post('/selection',[HomepageController::class, 'postSelection']);
+Route::get('/selection',[HomepageController::class, 'getSelection']);

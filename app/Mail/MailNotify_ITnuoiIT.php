@@ -3,11 +3,10 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MailNotify extends Mailable
+class MailNotify_ITnuoiIT extends Mailable
 {
    use Queueable, SerializesModels;
 
@@ -31,7 +30,7 @@ class MailNotify extends Mailable
    public function build()
    {
        return $this->from('lu.ho68contact@gmail.com')
-           ->view('mails.mail-notify')
-           ->subject('Đăng Ký Tuyển Sinh Online Thành Công');
+           ->view('mails.ITNuoiIT')
+           ->subject('Tham Gia Chương Trình ITNuoiIT');
    }
 }
