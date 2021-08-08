@@ -71,7 +71,7 @@ class PartnerController extends Controller
             $file->move($destinationPath, $name);
         }
         $partner = new Partner();
-        $partner->namecompany = $request->input('namecompany');
+        $partner->namecompany = $request->namecompany;
         $partner->image = $name;
         $partner->save();
 
