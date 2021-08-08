@@ -59,7 +59,7 @@ export default class EditPartner extends Component {
                 }
                 else {
                     console.log('Partner updated!');
-                    window.location.href="/partner";
+                    window.location.href = "/partner";
                 }
             })
             .catch((err) => {
@@ -68,35 +68,39 @@ export default class EditPartner extends Component {
     }
     render() {
         return (
-            <div>
-                <form 
+            <div className="w3-card-6 w3-border w3-center w3-text-yellow" style={{ width: '60%', margin:'auto' }}>
+                <div class="w3-container w3-orange w3-text-blue ">
+                    <h2 className="w3-serif w3-text-black">Edit new Partner</h2>
+                </div>
+                <form
                     onSubmit={this.onSubmit}
                     encType="multipart/form-data"
                     method="put"
                 >
-                    <legend>Edit new Partner</legend>
-                    <div className="form-group">
-                        <label>Name Company</label>
-                        <input
+                    {/* <legend className="w3-container">Edit new Partner</legend> */}
+                    {/* <h2>Edit new Partner</h2> */}
+                    <div class="w3-container">
+                        <label className="w3-serif" style={{fontSize:'25px'}}> <i class="fas fa-signature"></i>Name Company</label>
+                        <input className="w3-input w3-serif" style={{fontSize:'20px'}}
                             type="text"
                             name="namecompany"
                             onChange={this.onChangeNameCompany}
                             value={this.state.namecompany}
                         />
                     </div>
-                    <div className="form-group">
-                        <label>Image</label>
-                        <input
+                    <div class="w3-container">
+                    <label className="w3-serif" style={{fontSize:'25px'}}><i class="far fa-images"></i>Image</label>
+                        <input className="w3-input w3-serif" style={{fontSize:'20px'}}
                             id="fileupload"
                             type="file"
                             name="image"
                             onChange={this.onChangeImage}
                         />
                     </div>
-                    <div className="form-group">
-                        <img src={"/images/"+this.state.image} width= "200px"  height="150px"></img>
-                    </div>                  
-                    <button type="submit" className="btn-success">Update</button>
+                    <div class="w3-container">
+                        <img src={"/images/" + this.state.image} width="200px" height="150px"></img>
+                    </div>
+                    <button type="submit" className="w3-button w3-red w3-border w3-border-red w3-round-large">Update</button>
                 </form>
             </div>
         );

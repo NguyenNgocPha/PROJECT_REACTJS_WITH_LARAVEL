@@ -49,7 +49,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="">
-        <h1 style={{textAlign:'center', color:'#2b7a7a'}}>DASHBOARD OF PNV </h1>
+        <h1 className="w3-sans-serif" style={{textAlign:'center', color:'#0000FF'}}>DASHBOARD OF PNV </h1>
         <div className="row" style={{marginLeft:'86%',height:'40px', fontSize:'30px'}}>
           <a href="/indexAdmin" style={{background:'red'}}>
           <i class="fas fa-arrow-alt-circle-left"></i>Go Back
@@ -57,10 +57,10 @@ class Dashboard extends Component {
         </div>
         <div className="w3-quarter">
           <div className="w3-container w3-padding-16">
-            <div className="well" style={{ background: '#DC143C', color: 'white' }}>
+            <div className="well" style={{ background: '#DC143C', color: '#DC143C' }}>
               <div className="well-data">
                 <h3><i className="fas fa-users"></i> Total Donater</h3>
-                <h1>{this.state.countdonater}</h1>
+                <h1 style={{textAlign:'center'}}>{this.state.countdonater}</h1>
               </div>
             </div>
           </div>
@@ -68,9 +68,9 @@ class Dashboard extends Component {
         <div className="w3-quarter">
           <div className="w3-container w3-padding-16">
             <div className="well" style={{ background: '#1E90FF', color: 'white' }}>
-              <div>
-                <h3><i className="fas fa-newspaper"></i> Total Partner</h3>
-                <h1>{this.state.countpartner}</h1>
+              <div className="well-data">
+                <h3><i class="fas fa-building"></i>Total Partner</h3>
+                <h1 style={{textAlign:'center'}}>{this.state.countpartner}</h1>
               </div>
             </div>
           </div>
@@ -78,9 +78,9 @@ class Dashboard extends Component {
         <div className="w3-quarter">
           <div className="w3-container w3-padding-16">
             <div className="well" style={{ background: '#3CB371', color: 'white' }}>
-              <div>
+              <div className="well-data" >
                 <h3><i className="fas fa-comments"></i> Total Sharing</h3>
-                <h1>{this.state.countsharing}</h1>
+                <h1 style={{textAlign:'center'}}>{this.state.countsharing}</h1>
               </div>
             </div>
           </div>
@@ -88,9 +88,9 @@ class Dashboard extends Component {
         <div className="w3-quarter">
           <div className="w3-container w3-padding-16">
             <div className="well" style={{ background: '#FF8C00', color: 'white' }}>
-              <div>
-                <h3><i className="fas fa-list"></i> Total Leader</h3>
-                <h1>{this.state.countleader}</h1>
+              <div className="well-data">
+                <h3  tyle={{  color: 'white' }}><i class="fas fa-user-tie" ></i>Total Leader</h3>
+                <h1 style={{textAlign:'center'}}>{this.state.countleader}</h1>
               </div>
             </div>
           </div>

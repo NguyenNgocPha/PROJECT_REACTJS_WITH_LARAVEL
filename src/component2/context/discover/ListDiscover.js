@@ -66,10 +66,10 @@ class ListDiscover extends Component {
         const {  discovers, newModalDiscover } = this.state;
         return (
 
-            <div>
+            <div  style={{background:'url(https://st.quantrimang.com/photos/image/2018/01/31/hinh-nen-Powerpoint-35.jpg)'}}>
                 <div className="form-wrapper">
                     <div className="container">
-                        <h2>List of Discover</h2>
+                        <h2 className="w3-sans-serif" style={{textAlign:'center',color:'#0000FF'}}>List of Discover</h2>
                         <AddDiscover
                             newModalDiscover={newModalDiscover}
                             toogleAddModal={this.toogleAddModal}
@@ -77,15 +77,20 @@ class ListDiscover extends Component {
                             handleAddSubmit={this.handleAddSubmit}  
                             
                         />
-                        <a className="btn" href="/indexAdmin"> Go Back </a>
+                             <div className="row" style={{ marginLeft: '86%', fontSize: '30px',marginBotoom:'20px' }}>
+                            <a href="/indexAdmin" style={{ background: 'red' }}>
+                                <i class="fas fa-arrow-alt-circle-left"></i>Go Back
+                            </a>
+                        </div>
                         <Table>
                             <thead>
-                                <tr className="text-primary">
+                                <tr className="text-primary" style={{fontSize:'20px'}}>
                                     <th>ID</th>
-                                    <th>Title </th>
-                                    <th>Day</th>
+                                    <th style={{width:'100px'}}>Title </th>
+                                    <th style={{width:'200px'}}>Day</th>
                                     <th>Image</th>
-                                    <th>Content</th>
+                                    <th style={{width:'400px'}}>Content</th>
+                                    <th>Action</th>
 
                                 </tr>
                             </thead>

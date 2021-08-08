@@ -63,26 +63,30 @@ class ListSharing extends Component {
         const {  sharings, newModalSharing } = this.state;
         return (
             
-            <div>
+            <div  style={{ background: 'url(https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-light-pink-fluorescent-dotted-background-image_255310.jpg)' }}>
                 <div className="form-wrapper">
                     <div className="container">
-                        <h2>List of Sharing</h2>
+                        <h2 className="w3-sans-serif" style={{textAlign:'center',color:'#0000FF'}}>List of Sharing</h2>
                         <AddSharing
                             newModalSharing={newModalSharing}
                             toogleAddModal={this.toogleAddModal}
                             onCloseForm={this.onCloseForm}
                             handleAddSubmit={this.handleAddSubmit}
                         />
-                        <a className="btn" href="/indexAdmin"> Go Back </a>
+                             <div className="row" style={{ marginLeft: '86%',fontSize: '30px',marginBotoom:'20px' }}>
+                            <a href="/indexAdmin" style={{ background: 'red' }}>
+                                <i class="fas fa-arrow-alt-circle-left"></i>Go Back
+                            </a>
+                        </div>
                         <Table>
                             <thead>
-                                <tr className="text-primary">
+                                <tr className="text-primary" style={{fontSize:'20px'}}>
                                     <th>ID</th>
                                     <th>Name </th>
-                                    <th>Job</th>
-                                    <th>Share</th>
+                                    <th style={{width:'200px'}}>Job</th>
+                                    <th style={{width:'400px'}}>Share</th>
                                     <th>Image</th>
-                                    <th>Action</th>
+                                    <th style={{width:'200px'}} >Action</th>
 
                                 </tr>
                             </thead>

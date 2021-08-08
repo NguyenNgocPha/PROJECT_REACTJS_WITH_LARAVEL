@@ -66,7 +66,7 @@ export default class DonateForm extends Component {
                 <section id="ITRaisesIT" className="portfolio-area">
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                                 <div className="section-title text-center pb-20">
                                     <h3 className="title"><b>JOIN WITH CAMPAIGNS</b></h3>
                                     <p>To receive the support code for students, please follow the instructions below.</p>
@@ -75,7 +75,7 @@ export default class DonateForm extends Component {
                         </div>
                         <div className="row">
                             {this.state.campaigns.map(campaign =>
-                                <div key={campaign.id} className="col-lg-6">
+                                <div key={campaign.id} className="col-md-6">
                                     <div className="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                         <h5>Campaign {campaign.id}</h5><br />
                                         <h3 className="contact-title">{campaign.name}</h3>
@@ -93,7 +93,7 @@ export default class DonateForm extends Component {
                                     </div>
                                 </div>
                             )}
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                                 <div className="contact-form form-style-one mt-35 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                     <form id="contact-form" onSubmit={this.handleAddSubmit} encType="multipart/form-data" method="post">
                                         <div className="form-input mt-15">

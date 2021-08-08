@@ -5,7 +5,7 @@ export default class Mission extends Component {
         return (
             <div id="Mission">
                     <div className="row justify-content-center">
-                        <div className="col-lg-6">
+                        <div className="col-md-6">
                             <div className="section-title text-center pb-20">
                                 <h3 className="title"><b> MISSION - OBJECTIVES</b></h3>
                             </div>
@@ -51,7 +51,7 @@ export default class Mission extends Component {
 
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="trust">
@@ -79,14 +79,14 @@ export default class Mission extends Component {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-md-6" id="respect">
                                         <div className="respect">
                                             <img src="assets/images/Value_PNV/Respect.png" alt="Avatar" style={{width: '400px'}} />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-6">           
+                            <div className="col-md-6" id="five">           
                                 <ul className="five-value">
                                     <li><h2 className="trust-text">Trust</h2></li>
                                     <li><h2 >Responsibility</h2></li>

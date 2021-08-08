@@ -20,7 +20,7 @@ export default class Testimonials extends Component {
                 <section id="testimonial" className="pricing-area">
                     <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-lg-6">
+                        <div className="col-md-6">
                         <div className="section-title text-center pb-20">
                             <h3 className="title"><b>TESTIMONIALS</b></h3>
                         </div>

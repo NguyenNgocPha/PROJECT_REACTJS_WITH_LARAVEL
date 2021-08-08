@@ -54,22 +54,26 @@ class ListPartner extends Component {
             });
     };
     render() {
-        const {  partners, newModalPartner } = this.state;
+        const { partners, newModalPartner } = this.state;
         return (
-            <div>
+            <div style={{ background: 'url(https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-light-pink-fluorescent-dotted-background-image_255310.jpg)' }}>
                 <div className="form-wrapper">
                     <div className="container">
-                        <h2>List of Partner</h2>
+                        <h2 className="w3-cursive"  style={{textAlign:'center',color:'#0000FF'}}>List of Partner</h2>
                         <AddPartner
                             newModalPartner={newModalPartner}
                             toogleAddModal={this.toogleAddModal}
                             onCloseForm={this.onCloseForm}
                             handleAddSubmit={this.handleAddSubmit}
                         />
-                        <a className="btn" href="/indexAdmin"> Go Back </a>
+                       <div className="row" style={{ marginLeft: '86%',fontSize: '30px',marginBotoom:'20px' }}>
+                            <a href="/indexAdmin" style={{ background: 'red' }}>
+                                <i class="fas fa-arrow-alt-circle-left"></i>Go Back
+                            </a>
+                        </div>
                         <Table>
                             <thead>
-                                <tr className="text-primary">
+                                <tr className="text-primary" style={{fontSize:'20px'}}>
                                     <th>ID</th>
                                     <th>Partner </th>
                                     <th>Image</th>

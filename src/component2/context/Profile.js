@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import './Profile.css';
 class Profile extends Component {
   render() {
+
     return (
+
       <div className="container">
+      <a className="btn" href="/indexAdmin"> Go Back </a>
         <h1>YOUR PROFILE </h1>
         <hr />
         <div className="row">

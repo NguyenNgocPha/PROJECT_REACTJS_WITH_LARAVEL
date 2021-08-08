@@ -63,17 +63,17 @@ class ListLeader extends Component {
     render() {
         const { leaders, newModalLeader } = this.state;
         return (
-            <div>
+            <div style={{background:'url(https://st.quantrimang.com/photos/image/2018/01/31/hinh-nen-Powerpoint-35.jpg)'}}>
                 <div className="form-wrapper">
                     <div className="container">
-                        <h2>List of Leader</h2>
+                        <h2 className="w3-sans-serif" style={{textAlign:'center', color:'#0000FF'}}>List of Leader</h2>
                         <AddLeader
                             newModalLeader={newModalLeader}
                             toogleAddModal={this.toogleAddModal}
                             onCloseForm={this.onCloseForm}
                             handleAddSubmit={this.handleAddSubmit}
                         />
-                        <div className="row" style={{ marginLeft: '86%', height: '40px', fontSize: '30px',marginBotoom:'20px' }}>
+                        <div className="row" style={{ marginLeft: '86%', fontSize: '30px',marginBotoom:'20px' }}>
                             <a href="/indexAdmin" style={{ background: 'red' }}>
                                 <i class="fas fa-arrow-alt-circle-left"></i>Go Back
                             </a>
@@ -81,7 +81,7 @@ class ListLeader extends Component {
                        
                         <Table>
                             <thead>
-                                <tr className="text-primary">
+                                <tr className="text-primary" style={{fontSize:'20px'}}>
                                     <th>ID</th>
                                     <th>Name </th>
                                     <th>Job</th>

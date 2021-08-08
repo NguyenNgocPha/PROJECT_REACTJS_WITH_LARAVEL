@@ -1,3 +1,10 @@
 .donut{
   text-align: center;
 }
+.well{
+  border-radius: 5px;
+  
+}
+.well-data h3,h1{
+  color: antiquewhite;
+}
