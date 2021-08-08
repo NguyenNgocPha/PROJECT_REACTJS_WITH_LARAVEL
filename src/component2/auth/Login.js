@@ -11,7 +11,6 @@ export default class Login extends Component {
             email: '',
             password: '',
         }
-
     }
 
     onChangeEmail = (e) => {

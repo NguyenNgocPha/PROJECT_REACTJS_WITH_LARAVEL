@@ -11,7 +11,6 @@ import ListSharing from '../context/sharing/ListSharing';
 import ListLeader from '../context/leader/ListLeader';
 import ListDiscover from '../context/discover/ListDiscover';
 import ListCampaign from '../context/campaign/ListCampaign';
-
 import ListDonater from '../context/donater/ListDonater';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import EditPartner from '../context/Partner/EditPartner';
@@ -32,36 +31,33 @@ export default class Home extends Component {
           <div className="App" id="outer-container">
             <Route exact path="/indexAdmin">
               <Sidebar
-              pageWrapId={'page-wrap'}
-              outerContainerId={'outer-container'}
+                pageWrapId={'page-wrap'}
+                outerContainerId={'outer-container'}
               />
-              
             </Route>
             <Route exact path="/dashboard" >
               <Dashboard
               />
             </Route>
             <Route exact path="/partner" >
-              <ListPartner  />
+              <ListPartner />
             </Route>
             <Route exact path="/partner/:id/edit" component={EditPartner}>
-              
             </Route>
             <Route exact path="/sharing" >
-              <ListSharing  />
+              <ListSharing />
             </Route>
             <Route exact path="/leader" >
-              <ListLeader  />
+              <ListLeader />
             </Route>
             <Route exact path="/discover" >
-              <ListDiscover  />
+              <ListDiscover />
             </Route>
             <Route exact path="/campaign" >
-              <ListCampaign  />
+              <ListCampaign />
             </Route>
-           
             <Route exact path="/donater" >
-              <ListDonater  />
+              <ListDonater />
             </Route>
             <div id="page-wrap">
               <div
@@ -93,7 +89,7 @@ export default class Home extends Component {
                 </div>
               </div>
             </div>
-            
+
           </div>
 
         </Switch>
